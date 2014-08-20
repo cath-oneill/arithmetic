@@ -16,25 +16,25 @@
       var operation = Math.floor(Math.random()*4);
       if (operation === 0) {
         this.operation = '+'
-        this.number1 = Math.floor(Math.random()*50);
-        this.number2 = Math.floor(Math.random()*50);
+        this.number1 = Math.floor(Math.random()*51);
+        this.number2 = Math.floor(Math.random()*51);
         this.correctAnswer = this.number1 + this.number2;
       } else if (operation === 1) {
         this.operation = '-'
-        this.number1 = Math.floor(Math.random()*50);
+        this.number1 = Math.floor(Math.random()*51);
         this.number2 = Math.floor(Math.random()* this.number1);
         this.correctAnswer = this.number1 - this.number2;
       }else if (operation === 2) {
         this.operation = '*'
-        this.number1 = Math.floor(Math.random()*10);
-        this.number2 = Math.floor(Math.random()*10);
+        this.number1 = Math.floor(Math.random()*11);
+        this.number2 = Math.floor(Math.random()*11);
         this.correctAnswer = this.number1 * this.number2;
       } else {
         //set this up backwards as a multiplication problem to avoid decimals
         //the dividend is the large number, so it is set to the product created here
         this.operation = '/'
-        this.correctAnswer = Math.floor(Math.random()*10);
-        this.number2 = Math.floor(Math.random()*10);
+        this.correctAnswer = Math.floor(Math.random()*11);
+        this.number2 = Math.floor(Math.random()*10 + 1);
         this.number1 = this.number2 * this.correctAnswer;
       }
     }
